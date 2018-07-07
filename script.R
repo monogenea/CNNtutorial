@@ -132,7 +132,7 @@ plot(history)
 predictions <-  predict_classes(model, test_array)
 probabilities <- predict_proba(model, test_array)
 
-# Visual validation of 32 cases
+# Visual inspection of 32 cases
 set.seed(100)
 random <- sample(1:nrow(testData), 32)
 preds <- predictions[random,]
