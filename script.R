@@ -143,7 +143,7 @@ for(i in 1:length(random)){
       image(t(apply(test_array[random[i],,,], 2, rev)),
             col = gray.colors(12), axes = F)
       legend("topright", legend = ifelse(preds[i] == 0, "Cat", "Dog"),
-             text.col = 2, bty = "n", text.font = 2)
+             text.col = ifelse(preds[i] == 0, 2, 4), bty = "n", text.font = 2)
       legend("topleft", legend = probs[i], bty = "n", col = "white")
 }
 
