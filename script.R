@@ -72,7 +72,7 @@ save(trainData, testData, file = "catdogData.RData")
 
 ##### Fit NN #####
 
-# Fix structure for 2d DNN
+# Fix structure for 2d CNN
 train_array <- t(trainData$X)
 dim(train_array) <- c(50, 50, nrow(trainData$X), 1)
 # Reorder dimensions
@@ -88,7 +88,7 @@ testCat <- train_array[1,,,]
 image(t(apply(testCat, 2, rev)), col = gray.colors(12),
       axes = F)
 
-# Create test set
+# Build CNN model
 model <- keras_model_sequential() 
 model %>% 
       layer_conv_2d(kernel_size = c(3, 3), filter = 32,
