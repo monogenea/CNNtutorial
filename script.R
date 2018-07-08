@@ -6,7 +6,7 @@ library(EBImage)
 library(stringr)
 library(pbapply)
 
-firstCat <- readImage("train/cat.0.jpg")
+firstCat <- readImage("train/cat.1.jpg")
 display(firstCat)
 
 # Set image size
@@ -61,7 +61,8 @@ trainData <- extract_feature("train/", width, height)
 testData <- extract_feature("test1/", width, height, labelsExist = F)
 
 # Check processing on first cat
-testCat <- t(matrix(as.numeric(trainData$X[1,]),
+par(mar = rep(0, 4))
+testCat <- t(matrix(as.numeric(trainData$X[2,]),
                   nrow = width, ncol = height, T))
 image(t(apply(testCat, 2, rev)), col = gray.colors(12),
       axes = F)
@@ -149,4 +150,3 @@ for(i in 1:length(random)){
 
 # Save model
 save(model, file = "CNNmodel.RData")
-
