@@ -105,7 +105,7 @@ model %>%
       layer_conv_2d(kernel_size = c(3, 3), filter = 64,
                     activation = "relu", padding = "valid") %>%
       layer_max_pooling_2d(pool_size = 2) %>%
-      layer_dropout(0.25) %>%
+      layer_dropout(rate = 0.25) %>%
       
       layer_flatten() %>%
       layer_dense(units = 50, activation = "relu") %>% 
