@@ -10,10 +10,9 @@
 
 This work is partly based on:
 
-- Image processing - *Image Classification in R: MXNet* from Shikun Li (https://rpubs.com/kanedglsk/236125)
-- CNN architecture - Keras CIFAR10 CNN example (https://github.com/keras-team/keras/blob/master/examples/cifar10_cnn.py)
+- Image processing - [*Image Classification in R: MXNet*](https://rpubs.com/kanedglsk/236125) from Shikun Li 
+- CNN architecture - Keras [CIFAR10 CNN example](https://github.com/keras-team/keras/blob/master/examples/cifar10_cnn.py)
 
 Enjoy, all feedback is welcome!
 
 Francisco
-
