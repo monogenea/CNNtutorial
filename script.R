@@ -1,7 +1,6 @@
 
 ##### Process image #####
 library(keras)
-library(caret)
 library(EBImage)
 library(stringr)
 library(pbapply)
