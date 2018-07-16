@@ -5,8 +5,8 @@ library(EBImage)
 library(stringr)
 library(pbapply)
 
-firstCat <- readImage("train/cat.1.jpg")
-display(firstCat)
+secondCat <- readImage("train/cat.1.jpg")
+display(secondCat)
 
 # Set image size
 width <- 50
@@ -59,7 +59,7 @@ trainData <- extract_feature("train/", width, height)
 # Takes slightly less
 testData <- extract_feature("test1/", width, height, labelsExist = F)
 
-# Check processing on first cat
+# Check processing on second cat
 par(mar = rep(0, 4))
 testCat <- t(matrix(as.numeric(trainData$X[2,]),
                   nrow = width, ncol = height, T))
