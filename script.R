@@ -84,7 +84,7 @@ dim(test_array) <- c(50, 50, nrow(testData), 1)
 test_array <- aperm(test_array, c(3,1,2,4))
 
 # Check cat again
-testCat <- train_array[1,,,]
+testCat <- train_array[2,,,]
 image(t(apply(testCat, 2, rev)), col = gray.colors(12),
       axes = F)
 
